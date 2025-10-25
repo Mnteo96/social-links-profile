@@ -12,7 +12,10 @@ html, body{
     background-color: hsl(0, 0%, 8%);
 }
 
-body{
+
+main{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,17 +25,19 @@ body{
     background-color: hsl(0, 0%, 12%);
     color: hsl(0, 0%, 100%);
     width: 350px;
-    height: 550px;
+    max-height: 550px;
+    height: 100%;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px 40px;
+    padding: 30px;
+    text-align: center;
 }
 
-.card img{
+.profile-pic{
     border-radius: 50%;
-    width: 30%;
+    width: 50%;
     margin: 10px 0 20px;
 }
 
@@ -86,11 +91,23 @@ a{
     font-weight: 600;
 }
 
-@media (max-width: 350px){
+@media (max-width: 370px){
     .card{
         text-align: center;
+        margin: 0 20px;
     }
-    .card img{
+    .profile-pic{
         width: 60%;
+    }
+
+    .links{
+        height: 85%;
+    }
+}
+
+@media (max-width: 280px){
+    .links{
+        height: 65%;
+        gap: 4px
     }
 }
